@@ -71,6 +71,26 @@
           "name": "Mary Gordon"
         }
       ]
+    },
+    {
+      "id": 623360,
+      "category": "nature",
+      "title": "Works",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 76776,
+      "category": "housing",
+      "title": "Housewarming",
+      "description": "Simple house warming event",
+      "location": "Some where in the tropics",
+      "date": "2020-12-31T16:21:00.000Z",
+      "time": "12:00",
+      "attendees": []
     }
   ]
 }
