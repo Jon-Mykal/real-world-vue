@@ -1,44 +1,5 @@
 <template>
   <div>
-<<<<<<< HEAD
-    <h1>Create an Event, {{ user.name }}</h1>
-        <form @submit.prevent="createEvent">
-          <label>Select a category</label>
-          <select v-model="event.category">
-            <option v-for="cat in categories" :key="cat">{{ cat }}</option>
-          </select>
-          <h3>Name & describe your event</h3>
-          <div class="field">
-            <label>Title</label>
-            <input v-model="event.title" type="text" placeholder="Add an event title"/>
-          </div>
-          <div class="field">
-            <label>Description</label>
-            <input v-model="event.description" type="text" placeholder="Add a description"/>
-          </div>
-          <h3>Where is your event?</h3>
-          <div class="field">
-            <label>Location</label>
-            <input v-model="event.location" type="text" placeholder="Add a location"/>
-          </div>
-          <h3>When is your event?</h3>
-          <div class="field">
-            <label>Date</label>
-            <datepicker v-model="event.date" placeholder="Select a date"/>
-          </div>
-          <div class="field">
-            <label>Select a time</label>
-            <select v-model="event.time">
-              <option v-for="time in times" :key="time">{{ time }}</option>
-            </select>
-          </div>
-          <input type="submit" class="button -fill-gradient" value="Submit"/>
-        </form>
-    <!-- <button @click="getSome">Get Data</button>
-    <ul v-if="events">
-      <li v-for="ev in events" :key="ev.id"> {{ ev.name }} </li>
-    </ul> -->
-=======
     <h1>Create an Event</h1>
     <form @submit.prevent="createEvent">
       <label>Select a category</label>
@@ -79,17 +40,11 @@
 
       <input type="submit" class="button -fill-gradient" value="Submit"/>
     </form>
->>>>>>> Mastering_vuex2
   </div>
 </template>
 
 
 <script>
-<<<<<<< HEAD
-import EventService from '../services/EventService'
-import { mapState, mapGetters } from 'vuex'
-=======
->>>>>>> Mastering_vuex2
 import Datepicker from 'vuejs-datepicker'
 
 export default {
@@ -97,14 +52,6 @@ export default {
     Datepicker
   },
   data() {
-<<<<<<< HEAD
-    const times = [];
-    for (let time = 0; time < 24; time++) {
-      times.push(`${time}:00`);
-    }
-    return {
-      times,
-=======
     const times = []
     for (let i = 1; i <= 24; i++) {
       times.push(i + ':00')
@@ -112,42 +59,18 @@ export default {
     return {
       times,
       categories: this.$store.state.categories,
->>>>>>> Mastering_vuex2
       event: this.createFreshEventObject()
     }
   },
   methods: {
     createEvent() {
-<<<<<<< HEAD
-      // Wait until event has been POSTed
-      // clear event data
-      this.$store.dispatch('createEvent', this.event)
-        .then(() => {
-          // Route to the newly created event.
-=======
       this.$store
-        .dispatch('createEvent', this.event)
+        .dispatch('eventMdl/createEvent', this.event)
         .then(() => {
->>>>>>> Mastering_vuex2
           this.$router.push({
             name: 'event-show',
             params: { id: this.event.id }
           })
-<<<<<<< HEAD
-          this.event = this.createFreshEventObject();
-        })
-        .catch(() => {
-          console.log('There was a problem creating your event.');
-        });
-    },
-    createFreshEventObject() {
-      const user = this.user;
-      const id = Math.floor(Math.random() * 1000000)
-
-      return {
-        id,
-        user,
-=======
           this.event = this.createFreshEventObject()
         })
         .catch(() => {
@@ -155,13 +78,12 @@ export default {
         })
     },
     createFreshEventObject() {
-      const user = this.$store.state.user
+      const user = this.$store.state.userMdl.user
       const id = Math.floor(Math.random() * 10000000)
 
       return {
         id: id,
         user: user,
->>>>>>> Mastering_vuex2
         category: '',
         organizer: user,
         title: '',
@@ -172,13 +94,6 @@ export default {
         attendees: []
       }
     }
-<<<<<<< HEAD
-  },
-  computed: {
-    ...mapGetters(['getEventById']),
-    ...mapState(['user', 'categories', 'events'])
-=======
->>>>>>> Mastering_vuex2
   }
 }
 </script>
