@@ -231,6 +231,42 @@
       "date": "",
       "time": "5:00",
       "attendees": []
+    },
+    {
+      "id": 9178723,
+      "user": {
+        "id": "abc123",
+        "name": "Gregg"
+      },
+      "category": "",
+      "organizer": {
+        "id": "abc123",
+        "name": "Gregg"
+      },
+      "title": "Success",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 727119,
+      "user": {
+        "id": "abc123",
+        "name": "Gregg"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abc123",
+        "name": "Gregg"
+      },
+      "title": "Is this good?",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
