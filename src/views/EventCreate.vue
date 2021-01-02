@@ -38,6 +38,11 @@
         </select>
       </div>
 
+      <div class="field">
+        <label>Upload a pic</label>
+        <input id="files" type="file" ref="upload" @change="storeFile" />
+      </div>
+
       <input type="submit" class="button -fill-gradient" value="Submit"/>
     </form>
   </div>
@@ -93,6 +98,10 @@ export default {
         time: '',
         attendees: []
       }
+    },
+    storeFile() {
+      const file = this.$refs.upload.files[0];
+      console.log(file);
     }
   }
 }
@@ -101,5 +110,9 @@ export default {
 <style scoped>
 .field {
   margin-bottom: 24px;
+}
+
+#files {
+  appearance: none;
 }
 </style>

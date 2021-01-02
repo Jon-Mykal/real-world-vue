@@ -19,7 +19,7 @@ export default {
     EventCard
   },
   created() {
-    console.log(this.$store.state.userMdl.user);
+   // console.log(this.$store.state.userMdl.user);
     // Namespaced
     this.$store.dispatch("eventMdl/fetchEvents", {
       perPage: 3,
